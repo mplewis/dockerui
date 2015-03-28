@@ -3,9 +3,9 @@ var ngRoute = require('angular-route');
 var ngResource = require('angular-resource');
 
 var dockerui = {
-    templates: require('../dist/templates/app.js'),
-    services: require('./shared/services.js'),
-    filters: require('./shared/filters.js')
+    templates: require('../dist/templates/app'),
+    services: require('./shared/services'),
+    filters: require('./shared/filters')
 };
 
 angular.module('dockerui', ['dockerui.templates', 'ngRoute', 'dockerui.services', 'dockerui.filters', 'masthead', 'footer', 'dashboard', 'container', 'containers', 'images', 'image', 'startContainer', 'sidebar', 'info', 'builder', 'containerLogs', 'events'])
