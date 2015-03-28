@@ -1,4 +1,5 @@
 var angular = require('angular');
+var oboe = require('oboe');
 
 angular.module('events', [])
     .controller('EventsController', ['Settings', '$scope', function(Settings, $scope) {

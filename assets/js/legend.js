@@ -1,3 +1,6 @@
+// Chart.js.legend by bebraw
+// https://github.com/bebraw/Chart.js.legend/blob/master/src/legend.js
+
 function legend(parent, data) {
     parent.className = 'legend';
     var datas = data.hasOwnProperty('datasets') ? data.datasets : data;

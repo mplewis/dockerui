@@ -1,4 +1,5 @@
 var angular = require('angular');
+var legend = require('../../../assets/js/legend.js');
 
 angular.module('dashboard', [])
 .controller('DashboardController', ['$scope', 'Container', 'Image', 'Settings', 'LineChart', function($scope, Container, Image, Settings, LineChart) {

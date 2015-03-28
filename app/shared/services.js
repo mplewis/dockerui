@@ -1,5 +1,7 @@
 var angular = require('angular');
 var gritter = require('gritter');
+var Spinner = require('spin.js');
+var Chart = require('chart.js');
 
 angular.module('dockerui.services', ['ngResource'])
     .factory('Container', function($resource, Settings) {
