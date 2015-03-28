@@ -1,4 +1,5 @@
 var webpack = require('webpack')
+var path = require('path')
 
 module.exports = {
   entry: './app/app.js',
@@ -16,7 +17,12 @@ module.exports = {
   ],
   module: {
     loaders: [
-      { test: /\.js$/, exclude: /node_modules/, loader: 'babel-loader' }
+      { test: /\.js$/, exclude: /node_modules/, loader: 'babel-loader' },
+      { test: /\.css$/, loader: 'css-loader' },
+      {
+        test: /\.html$/,
+        loader: "ngtemplate?relativeTo=" + (path.resolve(__dirname, './app')) + "/!html"
+      }
     ]
   }
 }
