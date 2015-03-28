@@ -11,7 +11,14 @@ var config = {
     outputDir: 'build',
     watch: ['app/**']
   },
-  browserSync: {server: {baseDir: 'build'}},
+  browserSync: {
+    server: {
+      baseDir: 'build',
+      routes: {
+        '/components': 'app/components'
+      }
+    }
+  },
   webpack: {
     dev: require('./webpack.config.dev.js'),
     prod: require('./webpack.config.prod.js')
