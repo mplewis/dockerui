@@ -18,7 +18,7 @@ module.exports = {
   module: {
     loaders: [
       { test: /\.js$/, exclude: /node_modules/, loader: 'babel-loader' },
-      { test: /\.css$/, loader: 'css-loader' },
+      { test: /\.css$/, loader: 'style-loader!css-loader' },
       { test: /\.(otf|eot|svg|ttf|woff|gif|png)/, loader: 'url-loader?limit=8192' }
     ]
   }
