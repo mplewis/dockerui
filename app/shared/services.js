@@ -1,3 +1,5 @@
+var angular = require('angular');
+
 angular.module('dockerui.services', ['ngResource'])
     .factory('Container', function($resource, Settings) {
         'use strict';

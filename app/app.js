@@ -1,3 +1,5 @@
+var angular = require('angular');
+
 angular.module('dockerui', ['dockerui.templates', 'ngRoute', 'dockerui.services', 'dockerui.filters', 'masthead', 'footer', 'dashboard', 'container', 'containers', 'images', 'image', 'startContainer', 'sidebar', 'info', 'builder', 'containerLogs', 'events'])
     .config(['$routeProvider', function ($routeProvider) {
         'use strict';

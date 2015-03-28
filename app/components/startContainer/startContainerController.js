@@ -1,3 +1,5 @@
+var angular = require('angular');
+
 angular.module('startContainer', ['ui.bootstrap'])
 .controller('StartContainerController', ['$scope', '$routeParams', '$location', 'Container', 'Messages', 'containernameFilter', 'errorMsgFilter',
 function($scope, $routeParams, $location, Container, Messages, containernameFilter, errorMsgFilter) {

@@ -1,3 +1,5 @@
+var angular = require('angular');
+
 angular.module('dashboard', [])
 .controller('DashboardController', ['$scope', 'Container', 'Image', 'Settings', 'LineChart', function($scope, Container, Image, Settings, LineChart) {
     $scope.predicate = '-Created';

@@ -1,4 +1,3 @@
-
 function ImageViewModel(data) {
     this.Id = data.Id;
     this.Tag = data.Tag;

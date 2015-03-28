@@ -1,3 +1,5 @@
+var angular = require('angular');
+
 angular.module('events', [])
     .controller('EventsController', ['Settings', '$scope', function(Settings, $scope) {
         $scope.updateEvents = function() {

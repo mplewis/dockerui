@@ -1,3 +1,5 @@
+var angular = require('angular');
+
 angular.module('image', [])
 .controller('ImageController', ['$scope', '$q', '$routeParams', '$location', 'Image', 'Container', 'Messages', 'LineChart',
 function($scope, $q, $routeParams, $location, Image, Container, Messages, LineChart) {

@@ -1,3 +1,5 @@
+var angular = require('angular');
+
 angular.module('footer', [])
 .controller('FooterController', ['$scope', 'Settings', 'Docker', function($scope, Settings, Docker) {
     $scope.template = 'app/components/footer/statusbar.html';

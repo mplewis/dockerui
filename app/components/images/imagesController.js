@@ -1,3 +1,5 @@
+var angular = require('angular');
+
 angular.module('images', [])
 .controller('ImagesController', ['$scope', 'Image', 'ViewSpinner', 'Messages',
 function($scope, Image, ViewSpinner, Messages) {

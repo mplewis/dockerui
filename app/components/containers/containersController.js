@@ -1,3 +1,5 @@
+var angular = require('angular');
+
 angular.module('containers', [])
 .controller('ContainersController', ['$scope', 'Container', 'Settings', 'Messages', 'ViewSpinner', 
 function($scope, Container, Settings, Messages, ViewSpinner) {

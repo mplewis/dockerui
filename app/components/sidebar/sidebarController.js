@@ -1,3 +1,5 @@
+var angular = require('angular');
+
 angular.module('sidebar', [])
 .controller('SideBarController', ['$scope', 'Container', 'Settings',
 function($scope, Container, Settings) {
