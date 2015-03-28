@@ -1,6 +1,8 @@
 var angular = require('angular');
 var legend = require('../../../assets/js/legend.js');
 
+var ContainerViewModel = require('../../shared/viewmodel').ContainerViewModel;
+
 angular.module('dashboard', [])
 .controller('DashboardController', ['$scope', 'Container', 'Image', 'Settings', 'LineChart', function($scope, Container, Image, Settings, LineChart) {
     $scope.predicate = '-Created';

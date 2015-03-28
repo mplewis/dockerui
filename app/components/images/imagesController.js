@@ -1,5 +1,7 @@
 var angular = require('angular');
 
+var ImageViewModel = require('../../shared/viewmodel').ImageViewModel;
+
 angular.module('images', [])
 .controller('ImagesController', ['$scope', 'Image', 'ViewSpinner', 'Messages',
 function($scope, Image, ViewSpinner, Messages) {
