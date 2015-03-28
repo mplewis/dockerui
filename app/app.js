@@ -1,6 +1,7 @@
 var angular = require('angular');
 var ngRoute = require('angular-route');
 var ngResource = require('angular-resource');
+var ui = {bootstrap: require('angular-bootstrap-npm')};
 
 var dockerui = {
     templates: require('../dist/templates/app'),
