@@ -9,7 +9,7 @@ var config = {
     entryPoint: 'app/index.js',
     indexHtml: 'index.html',
     outputDir: 'build',
-    watch: ['src/**']
+    watch: ['app/**']
   },
   browserSync: {server: {baseDir: 'build'}},
   webpack: {
