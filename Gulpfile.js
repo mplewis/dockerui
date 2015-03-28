@@ -17,8 +17,12 @@ var config = {
     watch: ['app/**']
   },
   browserSync: {
+    port: 3005,
     server: {
-      baseDir: 'build'
+      baseDir: 'build',
+    },
+    ui: {
+      port: 3006
     }
   },
   webpack: {
