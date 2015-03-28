@@ -8,6 +8,11 @@ var dockerui = {
     filters: require('./shared/filters')
 };
 
+require('bootstrap/dist/css/bootstrap.css')
+require('gritter/css/jquery.gritter.css')
+
+require('../assets/css/app.css')
+
 var masthead = require('./components/masthead/mastheadController');
 var footer = require('./components/footer/footerController');
 var dashboard = require('./components/dashboard/dashboardController');
