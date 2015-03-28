@@ -8,6 +8,20 @@ var dockerui = {
     filters: require('./shared/filters')
 };
 
+var masthead = require('./components/masthead/mastheadController');
+var footer = require('./components/footer/footerController');
+var dashboard = require('./components/dashboard/dashboardController');
+var container = require('./components/container/containerController');
+var containers = require('./components/containers/containersController');
+var images = require('./components/images/imagesController');
+var image = require('./components/image/imageController');
+var startContainer = require('./components/startContainer/startContainerController');
+var sidebar = require('./components/sidebar/sidebarController');
+var info = require('./components/info/infoController');
+var builder = require('./components/builder/builderController');
+var containerLogs = require('./components/containerLogs/containerLogsController');
+var events = require('./components/events/eventsController');
+
 angular.module('dockerui', ['dockerui.templates', 'ngRoute', 'dockerui.services', 'dockerui.filters', 'masthead', 'footer', 'dashboard', 'container', 'containers', 'images', 'image', 'startContainer', 'sidebar', 'info', 'builder', 'containerLogs', 'events'])
     .config(['$routeProvider', function ($routeProvider) {
         'use strict';
