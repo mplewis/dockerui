@@ -1,4 +1,5 @@
 var angular = require('angular');
+var gritter = require('gritter');
 
 angular.module('dockerui.services', ['ngResource'])
     .factory('Container', function($resource, Settings) {
