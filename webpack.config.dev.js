@@ -19,10 +19,6 @@ module.exports = {
     loaders: [
       { test: /\.js$/, exclude: /node_modules/, loader: 'babel-loader' },
       { test: /\.css$/, loader: 'css-loader' },
-      {
-        test: /\.html$/,
-        loader: "ngtemplate?relativeTo=" + (path.resolve(__dirname, './app')) + "/!html"
-      }
     ]
   }
 }

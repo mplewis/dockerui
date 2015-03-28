@@ -8,15 +8,16 @@ var config = {
   paths: {
     entryPoint: 'app/index.js',
     indexHtml: 'index.html',
+    components: {
+      src: 'app/components/**/*.html',
+      dest: 'build/app/components/'
+    },
     outputDir: 'build',
     watch: ['app/**']
   },
   browserSync: {
     server: {
-      baseDir: 'build',
-      routes: {
-        '/components': 'app/components'
-      }
+      baseDir: 'build'
     }
   },
   webpack: {
@@ -29,8 +30,13 @@ gulp.task('clean', function(cb) {
   del(['build'], cb)
 })
 
+gulp.task('copy-components', function() {
+  return gulp.src(config.paths.components.src)
+    .pipe(gulp.dest(config.paths.components.dest))
+})
+
 // Don't clean while the server is running, it causes crashes
-gulp.task('build-dev-dirty', function() {
+gulp.task('build-dev-dirty', ['copy-components'], function() {
   return gulp.src(config.paths.entryPoint)
     .pipe(webpack(config.webpack.dev))
     .pipe(addsrc.append(config.paths.indexHtml))
