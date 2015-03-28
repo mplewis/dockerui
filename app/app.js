@@ -26,14 +26,14 @@ var events = require('./components/events/eventsController');
 angular.module('dockerui', ['dockerui.templates', 'ngRoute', 'dockerui.services', 'dockerui.filters', 'masthead', 'footer', 'dashboard', 'container', 'containers', 'images', 'image', 'startContainer', 'sidebar', 'info', 'builder', 'containerLogs', 'events'])
     .config(['$routeProvider', function ($routeProvider) {
         'use strict';
-        $routeProvider.when('/', {templateUrl: 'app/components/dashboard/dashboard.html', controller: 'DashboardController'});
-        $routeProvider.when('/containers/', {templateUrl: 'app/components/containers/containers.html', controller: 'ContainersController'});
-        $routeProvider.when('/containers/:id/', {templateUrl: 'app/components/container/container.html', controller: 'ContainerController'});
-        $routeProvider.when('/containers/:id/logs/', {templateUrl: 'app/components/containerLogs/containerlogs.html', controller: 'ContainerLogsController'});
-        $routeProvider.when('/images/', {templateUrl: 'app/components/images/images.html', controller: 'ImagesController'});
-        $routeProvider.when('/images/:id*/', {templateUrl: 'app/components/image/image.html', controller: 'ImageController'});
-        $routeProvider.when('/info', {templateUrl: 'app/components/info/info.html', controller: 'InfoController'});
-        $routeProvider.when('/events', {templateUrl: 'app/components/events/events.html', controller: 'EventsController'});
+        $routeProvider.when('/', {templateUrl: require('./components/dashboard/dashboard.html'), controller: 'DashboardController'});
+        $routeProvider.when('/containers/', {templateUrl: require('./components/containers/containers.html'), controller: 'ContainersController'});
+        $routeProvider.when('/containers/:id/', {templateUrl: require('./components/container/container.html'), controller: 'ContainerController'});
+        $routeProvider.when('/containers/:id/logs/', {templateUrl: require('./components/containerLogs/containerlogs.html'), controller: 'ContainerLogsController'});
+        $routeProvider.when('/images/', {templateUrl: require('./components/images/images.html'), controller: 'ImagesController'});
+        $routeProvider.when('/images/:id*/', {templateUrl: require('./components/image/image.html'), controller: 'ImageController'});
+        $routeProvider.when('/info', {templateUrl: require('./components/info/info.html'), controller: 'InfoController'});
+        $routeProvider.when('/events', {templateUrl: require('./components/events/events.html'), controller: 'EventsController'});
         $routeProvider.otherwise({redirectTo: '/'});
     }])
     // This is your docker url that the api will use to make requests
