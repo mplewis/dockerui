@@ -1,4 +1,5 @@
 var angular = require('angular');
+var Chart = require('chart.js');
 var legend = require('../../../assets/js/legend.js');
 
 var ContainerViewModel = require('../../shared/viewmodel').ContainerViewModel;
